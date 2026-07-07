@@ -1,16 +1,901 @@
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:#F6F4EF;color:#111;font-family:Arial,"思源黑体",sans-serif}
-.header{padding:40px 6%;display:flex;justify-content:space-between}
-.logo{font-size:30px;font-weight:900;letter-spacing:5px}
-nav a{margin-left:30px;color:#111;text-decoration:none}
-.hero{padding:8% 6%;display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
-.hero h1{font-size:160px;line-height:.8}
-.hero h2{font-size:35px;margin:30px 0}
-.intro{max-width:450px;font-size:18px}
-.button{display:inline-block;margin-top:40px;background:#111;color:#fff;padding:15px 35px;text-decoration:none}
-.hero img{width:100%;height:600px;object-fit:cover}
-.works,.about,.contact{padding:100px 6%}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:50px}
-.card{background:#fff;padding:50px;height:300px}
-.contact{background:#111;color:#fff}
-@media(max-width:900px){.hero,.cards{grid-template-columns:1fr}.hero h1{font-size:80px}}
+/* =================================
+   LaoZhi Portfolio
+   Creative Magazine Style
+================================= */
+
+
+
+/* 全局 */
+
+* {
+
+    margin:0;
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+
+
+html {
+
+    scroll-behavior:smooth;
+
+}
+
+
+
+body {
+
+
+    background:#F6F4EF;
+
+    color:#111;
+
+    font-family:
+    "思源黑体",
+    "Noto Sans SC",
+    Arial,
+    sans-serif;
+
+
+    line-height:1.6;
+
+
+}
+
+
+
+
+
+
+/* =========================
+   Header
+========================= */
+
+
+.header {
+
+
+    width:100%;
+
+    padding:40px 6%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+
+}
+
+
+
+.logo {
+
+
+    font-size:28px;
+
+    font-weight:900;
+
+    letter-spacing:5px;
+
+
+}
+
+
+
+nav {
+
+
+    display:flex;
+
+    gap:40px;
+
+
+}
+
+
+
+nav a {
+
+
+    text-decoration:none;
+
+    color:#111;
+
+    font-size:14px;
+
+    letter-spacing:2px;
+
+
+}
+
+
+
+nav a:hover {
+
+
+    opacity:.5;
+
+
+}
+
+
+
+
+
+
+
+/* =========================
+ Hero
+========================= */
+
+
+.hero {
+
+
+    min-height:90vh;
+
+    padding:5% 6%;
+
+
+    display:grid;
+
+    grid-template-columns:
+
+    1fr 1fr;
+
+
+    gap:60px;
+
+    align-items:center;
+
+
+}
+
+
+
+
+
+
+.year {
+
+
+    font-size:12px;
+
+    letter-spacing:4px;
+
+    margin-bottom:40px;
+
+    color:#666;
+
+
+}
+
+
+
+
+
+.hero h1 {
+
+
+    font-size:
+
+    clamp(80px,15vw,180px);
+
+
+    line-height:.85;
+
+    font-weight:900;
+
+
+    letter-spacing:-5px;
+
+
+}
+
+
+
+
+
+
+.hero h2 {
+
+
+    margin-top:25px;
+
+
+    font-size:32px;
+
+
+    font-weight:400;
+
+
+    letter-spacing:3px;
+
+
+}
+
+
+
+
+
+
+.intro {
+
+
+    margin-top:40px;
+
+
+    max-width:420px;
+
+
+    font-size:18px;
+
+
+    color:#444;
+
+
+}
+
+
+
+
+
+
+.button {
+
+
+    display:inline-block;
+
+
+    margin-top:50px;
+
+
+    padding:
+
+    16px 40px;
+
+
+    background:#111;
+
+
+    color:#fff;
+
+
+    text-decoration:none;
+
+
+    font-size:14px;
+
+
+    letter-spacing:2px;
+
+
+}
+
+
+
+
+
+.button:hover {
+
+
+    background:#C8A96A;
+
+
+}
+
+
+
+
+
+
+
+
+/* 主视觉图片 */
+
+
+.hero-image {
+
+
+    position:relative;
+
+
+}
+
+
+
+.hero-image img {
+
+
+    width:100%;
+
+
+    height:650px;
+
+
+    object-fit:cover;
+
+
+}
+
+
+
+
+
+.hero-image img:hover {
+
+
+    transform:scale(1.03);
+
+
+}
+
+
+
+.hero-image img {
+
+
+    transition:.8s;
+
+
+}
+
+
+
+
+
+
+
+
+/* =========================
+作品区域
+========================= */
+
+
+.works {
+
+
+    padding:120px 6%;
+
+
+}
+
+
+
+
+
+.section-title p {
+
+
+    font-size:13px;
+
+    letter-spacing:5px;
+
+    color:#777;
+
+
+}
+
+
+
+.section-title h2 {
+
+
+    font-size:60px;
+
+    margin-top:15px;
+
+}
+
+
+
+
+
+
+
+.work-grid {
+
+
+    margin-top:80px;
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    repeat(3,1fr);
+
+
+    gap:30px;
+
+
+}
+
+
+
+
+
+.card {
+
+
+    min-height:350px;
+
+
+    padding:40px;
+
+
+    background:#fff;
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    justify-content:flex-end;
+
+
+    border:1px solid #eee;
+
+
+    transition:.5s;
+
+
+}
+
+
+
+
+
+.card:hover {
+
+
+    transform:
+
+    translateY(-15px);
+
+
+}
+
+
+
+
+
+.card p {
+
+
+    font-size:12px;
+
+
+    letter-spacing:3px;
+
+
+    color:#777;
+
+
+}
+
+
+
+.card h3 {
+
+
+    margin-top:20px;
+
+
+    font-size:40px;
+
+
+}
+
+
+
+.card span {
+
+
+    margin-top:15px;
+
+
+    color:#555;
+
+
+}
+
+
+
+
+.card a {
+
+
+    margin-top:30px;
+
+
+    text-decoration:none;
+
+
+    color:#111;
+
+
+    letter-spacing:2px;
+
+
+    font-size:13px;
+
+
+}
+
+
+
+
+
+
+/* =========================
+ 关于
+========================= */
+
+
+.about {
+
+
+    padding:120px 6%;
+
+
+    display:flex;
+
+
+    justify-content:space-between;
+
+
+    gap:80px;
+
+
+}
+
+
+
+.about h2 {
+
+
+    font-size:60px;
+
+
+    margin:20px 0;
+
+
+}
+
+
+
+.about p {
+
+
+    max-width:550px;
+
+
+    color:#444;
+
+
+}
+
+
+
+
+
+
+
+.skills {
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    gap:20px;
+
+
+}
+
+
+
+
+
+.skills span {
+
+
+    border-bottom:
+
+    1px solid #111;
+
+
+    padding:15px 0;
+
+
+    font-size:24px;
+
+
+}
+
+
+
+
+
+
+
+/* =========================
+ 联系
+========================= */
+
+
+.contact {
+
+
+    padding:
+
+    150px 6%;
+
+
+    background:#111;
+
+
+    color:white;
+
+
+}
+
+
+
+
+
+.contact p:first-child {
+
+
+    letter-spacing:5px;
+
+
+    color:#aaa;
+
+
+}
+
+
+
+
+.contact h2 {
+
+
+    margin-top:30px;
+
+
+    font-size:
+
+    clamp(40px,7vw,90px);
+
+
+    line-height:1.1;
+
+
+}
+
+
+
+
+
+footer {
+
+
+    padding:40px 6%;
+
+
+    text-align:center;
+
+
+    font-size:12px;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================
+ 动画
+========================= */
+
+
+.hero-text,
+.hero-image,
+.card {
+
+
+    animation:
+
+    fadeUp 1s ease forwards;
+
+
+}
+
+
+
+
+@keyframes fadeUp {
+
+
+from {
+
+
+    opacity:0;
+
+    transform:
+
+    translateY(40px);
+
+
+}
+
+
+
+to {
+
+
+    opacity:1;
+
+    transform:
+
+    translateY(0);
+
+
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+/* =========================
+ 手机端
+========================= */
+
+
+@media(max-width:900px){
+
+
+
+.header {
+
+
+    padding:25px;
+
+
+}
+
+
+
+nav {
+
+
+    display:none;
+
+
+}
+
+
+
+.hero {
+
+
+    display:block;
+
+
+    padding:40px 25px;
+
+
+}
+
+
+
+.hero h1 {
+
+
+    font-size:80px;
+
+
+}
+
+
+
+.hero-image {
+
+
+    margin-top:50px;
+
+
+}
+
+
+
+.hero-image img {
+
+
+    height:400px;
+
+
+}
+
+
+
+
+
+.work-grid {
+
+
+    grid-template-columns:1fr;
+
+
+}
+
+
+
+.works {
+
+
+    padding:80px 25px;
+
+
+}
+
+
+
+.section-title h2 {
+
+
+    font-size:42px;
+
+
+}
+
+
+
+.about {
+
+
+    display:block;
+
+
+    padding:80px 25px;
+
+
+}
+
+
+
+.about h2 {
+
+
+    font-size:42px;
+
+
+}
+
+
+
+}
